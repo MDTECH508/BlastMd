@@ -1,14 +1,20 @@
 {
-  "name": "blast-bot",
+  "name": "BLAST MD",
   "version": "1.0.0",
+  "description": "WhatsApp Bot - BLAST MD Multi-Session",
   "main": "index.js",
-  "engines": { "node": "20.x" },
-  "scripts": { "start": "node index.js" },
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.0",
     "chalk": "^4.1.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "node-cache": "^5.1.2",
-    "pino": "^8.0.0"
+    "pino": "^8.21.0"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
