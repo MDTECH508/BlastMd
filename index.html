@@ -12,6 +12,7 @@
       --accent: #5a67ff;
       --accent-glow: rgba(90, 103, 255, 0.4);
       --green: #2ee6a8;
+      --red: #ff5c7a;
       --text: #f0f0f5;
       --text-dim: #8b8b9e;
     }
@@ -29,7 +30,6 @@
       overflow-x: hidden;
     }
 
-    /* Bèl efè limyè dèyè a (Glow) */
     body::before, body::after {
       content: '';
       position: fixed;
@@ -55,27 +55,21 @@
     .header h1 { font-size: 18px; font-weight: 700; letter-spacing: -0.5px; }
     .header p { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
 
-    /* Badges (Glassmorphism) */
+    /* Badges */
     .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
     .badge {
       display: flex; align-items: center; gap: 6px;
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      padding: 8px 14px; border-radius: 12px;
+      background: var(--glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border); padding: 8px 14px; border-radius: 12px;
       font-size: 11px; color: #c0c0d0; font-weight: 500;
     }
     .badge svg { width: 13px; height: 13px; stroke: #8b8b9e; fill: none; stroke-width: 2; }
 
-    /* Stats (Glassmorphism) */
+    /* Stats */
     .stats {
       display: grid; grid-template-columns: 1fr 1fr;
-      background: var(--glass);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--border);
-      border-radius: 20px; overflow: hidden; margin-bottom: 20px;
+      background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border); border-radius: 20px; overflow: hidden; margin-bottom: 20px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.4);
     }
     .stat { padding: 18px; }
@@ -85,7 +79,6 @@
     .stat .num.green { color: var(--green); text-shadow: 0 0 15px rgba(46, 230, 168, 0.3); }
     .stat small { font-size: 10px; color: #4a4a5e; margin-top: 4px; display: flex; align-items: center; gap: 4px; }
     
-    /* Ti pwen vèt k ap bat (Live indicator) */
     .live-dot {
       display: inline-block; width: 6px; height: 6px; background: var(--green);
       border-radius: 50%; box-shadow: 0 0 8px var(--green);
@@ -95,22 +88,17 @@
 
     /* Card */
     .card {
-      background: var(--glass);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--border);
-      border-radius: 24px; padding: 24px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border); border-radius: 24px; padding: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4); margin-bottom: 20px;
     }
     .card h2 { font-size: 18px; margin-bottom: 8px; font-weight: 600; letter-spacing: -0.3px; }
     .card p.desc { font-size: 13px; color: var(--text-dim); margin-bottom: 18px; line-height: 1.5; }
 
     /* Input */
     .input-wrap {
-      display: flex; align-items: center;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 14px; padding: 0 16px; margin-bottom: 16px;
+      display: flex; align-items: center; background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border); border-radius: 14px; padding: 0 16px; margin-bottom: 16px;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
     .input-wrap:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
@@ -124,13 +112,10 @@
     /* Buttons */
     button { cursor: pointer; border: none; font-family: inherit; }
     .btn-primary {
-      width: 100%;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: linear-gradient(135deg, #3b5bfd, #7b3ff2);
-      color: white; padding: 16px; border-radius: 14px;
-      font-size: 16px; font-weight: 600;
-      box-shadow: 0 4px 20px var(--accent-glow);
-      transition: transform 0.1s, opacity 0.2s;
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: linear-gradient(135deg, #3b5bfd, #7b3ff2); color: white;
+      padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 600;
+      box-shadow: 0 4px 20px var(--accent-glow); transition: transform 0.1s, opacity 0.2s;
     }
     .btn-primary svg { width: 18px; height: 18px; stroke: white; fill: none; stroke-width: 2; }
     .btn-primary:active { transform: scale(0.97); }
@@ -143,12 +128,9 @@
     
     .code-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
     .code {
-      font-size: 34px; font-weight: 700; letter-spacing: 8px;
-      color: #fff; font-family: "SF Mono", monospace;
-      text-shadow: 0 0 20px var(--accent-glow);
-      background: rgba(0,0,0,0.3);
-      padding: 16px; border-radius: 16px;
-      border: 1px solid var(--border);
+      font-size: 34px; font-weight: 700; letter-spacing: 8px; color: #fff; font-family: "SF Mono", monospace;
+      text-shadow: 0 0 20px var(--accent-glow); background: rgba(0,0,0,0.3);
+      padding: 16px; border-radius: 16px; border: 1px solid var(--border);
     }
     .code .x { color: var(--accent); font-size: 24px; letter-spacing: 0; margin: 0 4px; }
     
@@ -166,12 +148,12 @@
     .steps { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-dim); line-height: 1.8; }
     .steps b { color: #d0d0e0; }
 
-    .error { color: #ff5c7a; font-size: 12px; margin-top: 12px; display: none; text-align: center; }
+    .error { color: var(--red); font-size: 12px; margin-top: 12px; display: none; text-align: center; }
     .error.active { display: block; }
 
     /* Footer */
     .footer {
-      text-align: center; margin-top: 24px; padding-bottom: 20px;
+      text-align: center; margin-top: 10px; padding-bottom: 20px;
       font-size: 11px; color: var(--text-dim);
     }
     .footer span {
@@ -181,6 +163,39 @@
       color: #a0a0b8;
     }
     .footer span svg { width: 12px; height: 12px; stroke: var(--accent); fill: none; stroke-width: 2; }
+
+    /* --- Session List --- */
+    .session-list { display: flex; flex-direction: column; gap: 10px; }
+    .session-item {
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 14px; padding: 12px 16px; transition: background 0.2s;
+    }
+    .session-item:hover { background: rgba(255,255,255,0.07); }
+    .session-info { display: flex; flex-direction: column; gap: 4px; }
+    .session-phone { font-size: 14px; font-weight: 600; letter-spacing: 0.5px; }
+    .session-meta { display: flex; align-items: center; gap: 8px; font-size: 10px; color: var(--text-dim); }
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px; border-radius: 100px; font-size: 9px; font-weight: 600; text-transform: uppercase;
+    }
+    .status-badge.active { background: rgba(46, 230, 168, 0.15); color: var(--green); }
+    .status-badge.inactive { background: rgba(255, 92, 122, 0.15); color: var(--red); }
+    .status-badge .dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+
+    .btn-delete {
+      background: rgba(255, 92, 122, 0.1); border: 1px solid rgba(255, 92, 122, 0.3);
+      color: var(--red); width: 36px; height: 36px; border-radius: 10px;
+      display: grid; place-items: center; transition: background 0.2s;
+    }
+    .btn-delete:hover { background: rgba(255, 92, 122, 0.25); }
+    .btn-delete svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .btn-delete:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .empty-state {
+      text-align: center; padding: 30px 10px; color: var(--text-dim); font-size: 13px;
+    }
+    .empty-state svg { width: 40px; height: 40px; stroke: #3a3a4e; fill: none; stroke-width: 1.5; margin-bottom: 10px; }
   </style>
 </head>
 <body>
@@ -189,7 +204,6 @@
     <!-- Header -->
     <div class="header">
       <div class="logo">
-        <!-- Icon: satellite / signal -->
         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
           <path d="M13 7L9 3 3 9l4 4" />
           <path d="M11 9l-8 8 4 4 8-8" />
@@ -223,16 +237,16 @@
     <div class="stats">
       <div class="stat">
         <label>Total sessions</label>
-        <div class="num" id="totalSessions">117</div>
-        <small><span class="live-dot"></span><span id="serverCount">2/2 servers reporting</span></small>
+        <div class="num" id="totalSessions">0</div>
+        <small><span class="live-dot"></span><span id="serverCount">1 server reporting</span></small>
       </div>
       <div class="stat">
         <label>Active sessions</label>
-        <div class="num green" id="activeSessions">110</div>
+        <div class="num green" id="activeSessions">0</div>
       </div>
     </div>
 
-    <!-- Card -->
+    <!-- Card: Pairing -->
     <div class="card">
       <h2>Link a WhatsApp number</h2>
       <p class="desc">Enter a number with its country code, digits only — the bot backend generates the pairing code, no app link needed.</p>
@@ -248,7 +262,6 @@
       </button>
       <div class="error" id="error"></div>
 
-      <!-- Code display -->
       <div class="code-box" id="codeBox">
         <div class="code-label">Your Pairing Code</div>
         <div class="code" id="code">---- ----</div>
@@ -264,11 +277,19 @@
         </div>
       </div>
 
-      <!-- Steps -->
       <div class="steps">
         <b>1.</b> Open WhatsApp on your phone<br />
         <b>2.</b> Go to Settings → Linked Devices → Link a device<br />
         <b>3.</b> Tap "Link with phone number instead" and enter this code
+      </div>
+    </div>
+
+    <!-- Card: Sessions -->
+    <div class="card">
+      <h2>Sessions</h2>
+      <p class="desc">All sessions created on this server. You can delete any session you created.</p>
+      <div class="session-list" id="sessionList">
+        <!-- Sessions ap parèt isit la -->
       </div>
     </div>
 
@@ -290,9 +311,11 @@
     const errorEl = document.getElementById('error');
     const copyBtn = document.getElementById('copyBtn');
     const newBtn = document.getElementById('newBtn');
+    const sessionListEl = document.getElementById('sessionList');
 
     let currentCode = '';
 
+    // --- 1. Fonksyon pou jwenn kòd pè a ---
     async function getPairingCode() {
       const number = phoneInput.value.replace(/\D/g, '');
       if (number.length < 7) {
@@ -318,8 +341,10 @@
         currentCode = data.code;
         codeEl.innerHTML = currentCode.slice(0, 4) + ' <span class="x">-</span> ' + currentCode.slice(4);
         codeBox.classList.add('active');
+        // Rafrechi lis sesyon yo
+        loadSessions();
       } catch (e) {
-        showError('Pa ka jenere kòd la: ' + e.message);
+        showError(e.message);
       } finally {
         btn.disabled = false;
         btn.innerHTML = `
@@ -352,28 +377,103 @@
     });
     newBtn.addEventListener('click', getPairingCode);
 
-    // --- Fonksyon pou mete chif yo ajou (Auto-Update) ---
+    // --- 2. Fonksyon pou mete chif yo ajou ---
     async function updateStats() {
       try {
         const res = await fetch('/api/stats');
         if (!res.ok) return;
         const data = await res.json();
-        
         document.getElementById('totalSessions').textContent = data.total;
         document.getElementById('activeSessions').textContent = data.active;
-        document.getElementById('serverCount').textContent = data.servers + ' servers reporting';
+        document.getElementById('serverCount').textContent = data.servers + ' server(s) reporting';
+      } catch (e) {}
+    }
+
+    // --- 3. Fonksyon pou chaje ak afiche lis sesyon yo ---
+    async function loadSessions() {
+      try {
+        const res = await fetch('/api/sessions');
+        if (!res.ok) return;
+        const sessions = await res.json();
+        renderSessions(sessions);
+      } catch (e) {}
+    }
+
+    function renderSessions(sessions) {
+      if (sessions.length === 0) {
+        sessionListEl.innerHTML = `
+          <div class="empty-state">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <div>No sessions yet. Create one above.</div>
+          </div>
+        `;
+        return;
+      }
+
+      sessionListEl.innerHTML = sessions.map(s => {
+        const date = new Date(s.createdAt);
+        const timeStr = date.toLocaleString('fr-FR', { 
+          day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' 
+        });
+        const statusClass = s.active ? 'active' : 'inactive';
+        const statusText = s.active ? 'Active' : 'Inactive';
+        return `
+          <div class="session-item">
+            <div class="session-info">
+              <div class="session-phone">+${s.phone}</div>
+              <div class="session-meta">
+                <span class="status-badge ${statusClass}">
+                  <span class="dot"></span> ${statusText}
+                </span>
+                <span>${timeStr}</span>
+              </div>
+            </div>
+            <button class="btn-delete" onclick="deleteSession('${s.phone}')" title="Siprime sesyon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+              </svg>
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // --- 4. Fonksyon pou siprime yon sesyon ---
+    async function deleteSession(phone) {
+      if (!confirm(`Ou sèten ou vle siprime sesyon +${phone}?`)) return;
+      try {
+        const res = await fetch(`/api/sessions/${phone}`, { method: 'DELETE' });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Erè');
+        }
+        // Rafrechi lis la ak stats yo
+        await loadSessions();
+        await updateStats();
       } catch (e) {
-        // Silans si l echwe
+        alert('Pa ka siprime sesyon an: ' + e.message);
       }
     }
 
-    setInterval(updateStats, 5000);
+    // --- 5. Rele fonksyon yo okòmansman ---
     updateStats();
+    loadSessions();
+
+    // Chak 5 segonn, mete stats yo ajou epi rafrechi lis sesyon yo
+    setInterval(() => {
+      updateStats();
+      loadSessions();
+    }, 5000);
   </script>
 
   <style>
-    /* Pou bouton loading lan ka vire */
     @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
   </style>
 </body>
-</html>
+  </html>
